@@ -1,4 +1,9 @@
 package com.robertsawyer.task.luhn.repository;
 
-public interface NumberRepository {
+import com.robertsawyer.task.luhn.entity.Number;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface NumberRepository extends JpaRepository<Number, Long> {
+
+
 }
