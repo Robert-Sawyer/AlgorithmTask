@@ -1,0 +1,55 @@
+.pageContainer{
+    left: 0px;
+    background-color: antiquewhite;
+    margin-left: 0px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    height: 100%;
+}
+
+.formContainer{
+    width: 230px;
+    padding: 10px;
+    border-radius: 20px;
+    position: center;
+    margin: 0 auto;
+}
+
+#execute {
+    background-color: black;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.title {
+    color: cadetblue;
+    font-size: 35px;
+    text-align: center;
+}
+
+.result {
+    top: 180px;
+    padding: 15px;
+}
+
+#correctNumber {
+    font-size: 40px;
+    color: green;
+    text-align: center;
+    font-weight: bold;
+}
+
+#wrongNumber {
+    font-size: 40px;
+    text-align: center;
+    color: red;
+    font-weight: bold;
+}

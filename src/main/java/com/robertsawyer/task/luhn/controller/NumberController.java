@@ -33,10 +33,11 @@ public class NumberController {
             return "/checkNumber";
         }
 
-        boolean isCorrect = numberService.checkIsCorrect(numberDTO);
+        Boolean isCorrect = numberService.checkIsCorrect(numberDTO);
         numberDTO.setIsCorrect(isCorrect);
         numberService.saveNumber(numberDTO);
 
-        return "/checkNumber";
+        return "redirect:/checked";
     }
+
 }

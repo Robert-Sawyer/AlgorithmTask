@@ -2,7 +2,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-
 <html>
 <head>
     <title>Sprawdź liczbę</title>
@@ -17,19 +16,18 @@
 </head>
 <body>
 
-
 <div class="pageContainer">
-    <div class="title">
-        <h2>SPRAWDZENIE POPRAWNOŚCI LICZBY WEDŁUG ALGORYTMU LUHNA</h2>
-    </div>
-    <div class="formContainer" >
-        <form:form method="post" modelAttribute="checkNumber">
-            <form:errors path="*"/><br>
-            Sprawdź liczbę: <form:input path="number"/><br>
-            <input id="execute" type="submit" value="Sprawdź">
-        </form:form>
+    <div class="result">
+        <c:set var="number" scope="session" value="${showNumber}"/>
+        <c:choose>
+            <c:when test="${number.correct == true}">
+                <p id="correctNumber">Liczba <c:out value="${number.checkingNumber}"/> jest poprawna.</p>
+            </c:when>
+            <c:otherwise>
+                <p id="wrongNumber">Liczba <c:out value="${number.checkingNumber}"/> jest niepoprawna.</p>
+            </c:otherwise>
+        </c:choose>
     </div>
 </div>
-
 </body>
 </html>

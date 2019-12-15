@@ -19,7 +19,7 @@ public class Number {
     private String checkingNumber;
 
     @Column
-    private boolean isCorrect;
+    private Boolean isCorrect;
 
     public Long getId() {
         return id;

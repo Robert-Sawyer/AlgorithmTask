@@ -42,4 +42,8 @@ public class NumberService {
         number.setIsCorrect(numberDTO.isCorrect());
         numberRepository.save(number);
     }
+
+    public Number getLastNumber() {
+        return numberRepository.findLast();
+    }
 }
